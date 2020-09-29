@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: default-docker-pipeline
+
+steps:
+- name: launch
+  image: python3
+  commands:
+  - ./toto.py
+
+- name: end
+  image: alpine
+  commands:
+  - echo "END OF TOTO.PY"
